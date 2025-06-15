@@ -31,14 +31,6 @@ jobs:
         uses: actions/setup-python@v5.0.0
         with:
           python-version: "3.12"
-      - name: Install Firefox and GeckoDriver
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y firefox-esr
-          wget https://github.com/mozilla/geckodriver/releases/download/v0.34.0/geckodriver-v0.34.0-linux64.tar.gz
-          tar -xvzf geckodriver-v0.34.0-linux64.tar.gz
-          chmod +x geckodriver
-          sudo mv geckodriver /usr/local/bin/
 
       - name: Install dependencies
         run: |
